@@ -4,7 +4,7 @@
 
     /// <summary>
     /// Abstract base class for generators
-    /// It implements the IGenerator interface
+    /// All subclasses must implement the IGenerator interface
     /// Provides some default implementation
     /// </summary>
     class Generator : IGenerator
@@ -26,10 +26,10 @@
     }
 
     /// <summary>
-    /// Concrete UKGenerator class.
+    /// Concrete UKLottoGenerator class.
     /// Generates six balls from 1 to 59
     /// </summary>
-    class UKGenerator : Generator
+    class UKLottoGenerator : Generator
     {
         private readonly Limits Limits = new(6, 1, 59);
 
@@ -42,10 +42,10 @@
     }
 
     /// <summary>
-    /// Concrete EuroGenerator class.
+    /// Concrete EuroMillionsGenerator class.
     /// Generates five balls from 1 to 50 and two balls from 1 to 12
     /// </summary>
-    class EuroGenerator : Generator
+    class EuroMillionsGenerator : Generator
     {
         private readonly Limits NormalLimits = new(5, 1, 50);
         private readonly Limits SpecialLimits = new(2, 1, 12);
