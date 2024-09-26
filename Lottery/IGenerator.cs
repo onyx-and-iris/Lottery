@@ -1,12 +1,10 @@
 ﻿namespace Lottery
 {
     /// <summary>
-    /// 
+    /// All Generators must implement the Generate method
     /// </summary>
     interface IGenerator
     {
-        int Count { get; }
-
-        List<int> Generate();
+        Numbers Generate();
     }
 }
