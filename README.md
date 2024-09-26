@@ -4,7 +4,7 @@
 
 Generate numbers for the following lottery types:
 
-#### UKLotto
+#### UK Lotto
 
 6 balls of 1-59
 
