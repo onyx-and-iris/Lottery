@@ -4,11 +4,11 @@
 
 Generate numbers for the following lottery types:
 
-#### UK Lottery
+#### UKLotto
 
 6 balls of 1-59
 
-#### Euro Lottery
+#### EuroMillions
 
 5 balls of 1-47 and 2 lucky star of 1-12
 
