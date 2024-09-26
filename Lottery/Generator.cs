@@ -36,6 +36,9 @@
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     class SetForLifeGenerator : IGenerator
     {
         public int Count { get; } = 10;

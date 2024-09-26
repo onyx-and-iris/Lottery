@@ -9,7 +9,7 @@
             Spacing="25">
             <Picker x:Name="LottoPicker" Title="Kind of Lotto" SelectedIndexChanged="LottoPicker_SelectedIndexChanged" />
 
-            <Label x:Name="Numbers" Text="Numbers:" />
+            <Label x:Name="Numbers" Text="Numbers: (Click Spin button to generate)" />
 
             <Button x:Name="SpinButton" Text="Spin" Clicked="SpinButton_Clicked"/>
         </VerticalStackLayout>

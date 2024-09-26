@@ -2,7 +2,7 @@
 {
     public partial class MainPage : ContentPage
     {
-        List<IGenerator> generators = [new UKGenerator(), new EuroGenerator(), new SetForLifeGenerator()];
+        readonly List<IGenerator> generators = [new UKGenerator(), new EuroGenerator(), new SetForLifeGenerator()];
         IGenerator generator;
         const KindOfLotto DEFAULT_GENERATOR = KindOfLotto.Uk;
 
