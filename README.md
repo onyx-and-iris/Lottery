@@ -1,1 +1,21 @@
 # Lottery
+
+![App Image](./img/lottery.png)
+
+Generate numbers for the following lottery types:
+
+#### UK Lottery
+
+6 balls of 1-59
+
+#### Euro Lottery
+
+5 balls of 1-47 and 2 lucky star of 1-12
+
+#### Set For Life
+
+5 balls of 1-47 and 1 life ball of 1-10
+
+#### Thunderball
+
+5 balls of 1-39 and 1 thunderball of 1-14
