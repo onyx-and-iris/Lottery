@@ -5,5 +5,6 @@
         Uk,
         Euro,
         SetForLife,
+        Thunderball,
     }
 }
