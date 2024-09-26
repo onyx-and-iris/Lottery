@@ -10,7 +10,7 @@ Generate numbers for the following lottery types:
 
 #### EuroMillions
 
-5 balls of 1-47 and 2 lucky star of 1-12
+5 balls of 1-47 and 2 lucky stars of 1-12
 
 #### Set For Life
 
