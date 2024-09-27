@@ -23,6 +23,14 @@
             }
             NumberList.Sort();
         }
+
+        protected static void FillNumbers(
+            List<int> NormalList, Limits NormalLimits, 
+            List<int> SpecialList, Limits SpecialLimits)
+        {
+            FillNumbers(NormalList, NormalLimits);
+            FillNumbers(SpecialList, SpecialLimits);
+        }
     }
 
     /// <summary>
@@ -53,8 +61,7 @@
         public override Numbers Generate()
         {
             NumbersWithSpecial Numbers = new(KindOfLottery.Euro, [], []);
-            Generator.FillNumbers(Numbers.Normal, NormalLimits);
-            Generator.FillNumbers(Numbers.Special, SpecialLimits);
+            Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
     }
@@ -71,8 +78,7 @@
         public override Numbers Generate()
         {
             NumbersWithSpecial Numbers = new(KindOfLottery.SetForLife, [], []);
-            Generator.FillNumbers(Numbers.Normal, NormalLimits);
-            Generator.FillNumbers(Numbers.Special, SpecialLimits);
+            Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
     }
@@ -89,8 +95,7 @@
         public override Numbers Generate()
         {
             NumbersWithSpecial Numbers = new(KindOfLottery.Thunderball, [], []);
-            Generator.FillNumbers(Numbers.Normal, NormalLimits);
-            Generator.FillNumbers(Numbers.Special, SpecialLimits);
+            Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
     }
