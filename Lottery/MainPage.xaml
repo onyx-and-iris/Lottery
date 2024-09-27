@@ -9,9 +9,9 @@
             Spacing="25">
             <Picker x:Name="LotteryPicker" Title="Pick your lottery" SelectedIndexChanged="LotteryPicker_SelectedIndexChanged" />
 
-            <Label x:Name="NumbersLabel" Text="Click Spin button to generate" HorizontalOptions="Center" FontSize="Medium"  />
+            <Label x:Name="NumbersLabel" Text="Click Play button to generate numbers" HorizontalOptions="Center" FontSize="Medium"  />
 
-            <Button x:Name="SpinButton" Text="Spin" Clicked="SpinButton_Clicked"/>
+            <Button x:Name="PlayButton" Text="Play" Clicked="PlayButton_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

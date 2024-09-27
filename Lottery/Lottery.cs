@@ -1,53 +1,36 @@
 ﻿namespace Lottery
 {
-    /// <summary>
-    /// Base Lottery class, use it for lotteries that generate a single set of numbers.
-    /// SpecialIdentifier may be overridden for Lotteries with Special values.
-    /// </summary>
-    /// <param name="Generator">A fully formed Generator</param>
-    internal class Lottery(IGenerator Generator)
+    internal class Lottery(Limits limits)
     {
-        protected Numbers GenerateNumbers() => Generator.Generate();
-
-        public virtual string Output()
-        {
-            var numbers = GenerateNumbers();
-            return $"Numbers: {string.Join(", ", numbers.Normal)}";
-        }
+        protected Limits Limits => limits;
+        public virtual string Play() => $"Numbers: {string.Join(", ", Generator.Generate(Limits))}";
     }
 
-    /// <summary>
-    /// Abstract base class, for lotteries with special values.
-    /// It subclasses Lottery.
-    /// </summary>
-    /// <param name="Generator">A fully formed Generator</param>
-    internal class LotteryWithSpecial(IGenerator Generator) : Lottery(Generator)
+    internal class LotteryWithSpecial(Limits limits, Limits specialLimits) : Lottery(limits)
     {
+        protected Limits SpecialLimits => specialLimits;
         protected virtual string SpecialIdentifier => throw new NotImplementedException();
 
-        public override string Output()
+        public override string Play()
         {
-            var numbers = GenerateNumbers() as NumbersWithSpecial
-                ?? throw new LotteryException($"Unable to generate numbers for {this}");
-
             return string.Join("\t", [
-                $"Numbers: {string.Join(", ", numbers.Normal)}",
-                $"{SpecialIdentifier}: {string.Join(", ", numbers.Special)}",
+                $"Numbers: {string.Join(", ", Generator.Generate(Limits))}",
+                $"{SpecialIdentifier}: {string.Join(", ", Generator.Generate(SpecialLimits))}",
             ]);
         }
     }
 
-    internal class EuroMillionsLotteryWithSpecial(IGenerator Generator) : LotteryWithSpecial(Generator)
+    internal class EuroMillionsLottery(Limits limits, Limits specialLimits) : LotteryWithSpecial(limits, specialLimits)
     {
         protected override string SpecialIdentifier => "Lucky Stars";
     }
 
-    internal class SetForLifeLotteryWithSpecial(IGenerator Generator) : LotteryWithSpecial(Generator)
+    internal class SetForLifeLottery(Limits limits, Limits specialLimits) : LotteryWithSpecial(limits, specialLimits)
     {
         protected override string SpecialIdentifier => "Life Ball";
     }
 
-    internal class ThunderballLotteryWithSpecial(IGenerator Generator) : LotteryWithSpecial(Generator)
+    internal class ThunderballLottery(Limits limits, Limits specialLimits) : LotteryWithSpecial(limits, specialLimits)
     {
         protected override string SpecialIdentifier => "Thunderball";
     }
