@@ -6,7 +6,7 @@
     /// Abstract base class for lotteries.
     /// Limits property must be overridden.
     /// </summary>
-    internal class Lottery
+    internal abstract class Lottery
     {
         protected virtual Limits Limits => throw new NotImplementedException();
         public virtual string Play() => $"Numbers: {string.Join(", ", Generator.Generate(Limits))}";
@@ -26,7 +26,7 @@
     /// It subclasses Lottery.
     /// SpecialLimits and SpecialIdentifier properties must be overridden.
     /// </summary>
-    internal class LotteryWithSpecial : Lottery
+    internal abstract class LotteryWithSpecial : Lottery
     {
         protected virtual Limits SpecialLimits => throw new NotImplementedException();
         protected virtual string SpecialIdentifier => throw new NotImplementedException();
