@@ -1,6 +1,9 @@
 ﻿namespace Lottery
 {
-    enum KindOfLotto : int
+    /// <summary>
+    /// 
+    /// </summary>
+    enum KindOfLottery : int
     {
         Uk,
         Euro,
