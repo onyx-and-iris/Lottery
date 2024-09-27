@@ -24,7 +24,7 @@
 
         private void SpinButton_Clicked(object sender, EventArgs e)
         {
-            NumbersLabel.Text = string.Join("\t", Lottery.Output());
+            NumbersLabel.Text = Lottery.Output();
             SemanticScreenReader.Announce(NumbersLabel.Text);
         }
 
