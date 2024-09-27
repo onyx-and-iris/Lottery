@@ -1,8 +1,15 @@
-# Lottery
+# .NET MAUI Lottery Number Generator
 
 ![App Image](./img/lottery.png)
 
-Generate numbers for the following lottery types:
+Use this app at your own risk. Consider checking the following references:
+
+- [Responsible Play](https://www.national-lottery.co.uk/responsible-play)
+- [Gamble Aware](https://www.gambleaware.org/)
+
+This app is essentially just a random number generator, it won't increase your chance of winning!
+
+## Supported lottery types:
 
 #### UK Lotto
 
