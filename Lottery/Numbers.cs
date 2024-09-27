@@ -1,6 +1,6 @@
 ﻿namespace Lottery
 {
-    internal record Numbers(KindOfLottery Kind, List<int> Normal);
+    internal record Numbers(List<int> Normal);
 
-    internal record NumbersWithSpecial(KindOfLottery Kind, List<int> Normal, List<int> Special) : Numbers(Kind, Normal);
+    internal record NumbersWithSpecial(List<int> Normal, List<int> Special) : Numbers(Normal);
 }

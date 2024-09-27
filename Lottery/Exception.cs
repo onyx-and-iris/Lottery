@@ -3,7 +3,5 @@
     /// <summary>
     /// Base Exception class for the Lottery app
     /// </summary>
-    internal class LotteryException(string message) : Exception(message)
-    {
-    }
+    internal class LotteryException(string message) : Exception(message) { }
 }

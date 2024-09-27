@@ -43,7 +43,7 @@
 
         public override Numbers Generate()
         {
-            Numbers Numbers = new(KindOfLottery.Uk, []);
+            Numbers Numbers = new([]);
             Generator.FillNumbers(Numbers.Normal, Limits);
             return Numbers;
         }
@@ -60,7 +60,7 @@
 
         public override Numbers Generate()
         {
-            NumbersWithSpecial Numbers = new(KindOfLottery.Euro, [], []);
+            NumbersWithSpecial Numbers = new([], []);
             Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
@@ -77,7 +77,7 @@
 
         public override Numbers Generate()
         {
-            NumbersWithSpecial Numbers = new(KindOfLottery.SetForLife, [], []);
+            NumbersWithSpecial Numbers = new([], []);
             Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
@@ -94,7 +94,7 @@
 
         public override Numbers Generate()
         {
-            NumbersWithSpecial Numbers = new(KindOfLottery.Thunderball, [], []);
+            NumbersWithSpecial Numbers = new([], []);
             Generator.FillNumbers(Numbers.Normal, NormalLimits, Numbers.Special, SpecialLimits);
             return Numbers;
         }
