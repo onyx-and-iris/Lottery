@@ -2,7 +2,7 @@
 {
     /// <summary>
     /// Base Lottery class, it accepts a Generator
-    /// SpecialIdentifier may be overriden for Lotteries with Special values.
+    /// SpecialIdentifier may be overridden for Lotteries with Special values.
     /// </summary>
     /// <param name="Generator"></param>
     internal class Lottery(IGenerator Generator)
