@@ -4,6 +4,7 @@
 
     /// <summary>
     /// Abstract base class for lotteries.
+    /// Limits property must be overridden.
     /// </summary>
     internal class Lottery
     {
