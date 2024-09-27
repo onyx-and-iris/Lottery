@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Lottery"
     Shell.FlyoutBehavior="Disabled"
-    Title="">
+    Title="Lottery Number Generator">
 
     <ShellContent
-        Title="Lottery Number Picker"
+        Title="Lottery Number Generator"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

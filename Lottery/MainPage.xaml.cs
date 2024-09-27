@@ -16,10 +16,10 @@
             InitializeComponent();
 
             List<string> lottos = ["UK Lotto", "EuroMillions", "Set For Life", "Thunderball"];
-            LottoPicker.ItemsSource = lottos;
-            LottoPicker.SelectedIndex = (int)DefaultLottery;
+            LotteryPicker.ItemsSource = lottos;
+            LotteryPicker.SelectedIndex = (int)DefaultLottery;
 
-            Lottery = Lotteries[LottoPicker.SelectedIndex];
+            Lottery = Lotteries[LotteryPicker.SelectedIndex];
         }
 
         private void SpinButton_Clicked(object sender, EventArgs e)
@@ -43,14 +43,15 @@
                     }
                     break;
                 default:
-                    throw new LottoPickerException($"no NumbersLabel output defined for {numbers.Kind}");
+                    throw new LotteryException($"no NumbersLabel output defined for {numbers.Kind}");
             };
             NumbersLabel.Text = string.Join("\t", output);
+            SemanticScreenReader.Announce(NumbersLabel.Text);
         }
 
-        private void LottoPicker_SelectedIndexChanged(object sender, EventArgs e)
+        private void LotteryPicker_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Lottery = Lotteries[LottoPicker.SelectedIndex];
+            Lottery = Lotteries[LotteryPicker.SelectedIndex];
         }
     }
 }

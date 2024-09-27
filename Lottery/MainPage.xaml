@@ -7,7 +7,7 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Picker x:Name="LottoPicker" Title="Kind of Lottery" SelectedIndexChanged="LottoPicker_SelectedIndexChanged" />
+            <Picker x:Name="LotteryPicker" Title="Kind of Lottery" SelectedIndexChanged="LotteryPicker_SelectedIndexChanged" />
 
             <Label x:Name="NumbersLabel" Text="Click Spin button to generate" HorizontalOptions="Center" FontSize="Medium"  />
 

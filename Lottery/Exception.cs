@@ -1,9 +1,9 @@
 ﻿namespace Lottery
 {
     /// <summary>
-    /// Base Exception class for the LottoPicker app
+    /// Base Exception class for the Lottery app
     /// </summary>
-    internal class LottoPickerException(string message) : Exception(message)
+    internal class LotteryException(string message) : Exception(message)
     {
     }
 }
