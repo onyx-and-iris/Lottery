@@ -1,14 +1,12 @@
 ﻿namespace Lottery
 {
-    internal record Limits(int Count, int Lower, int Upper);
-
     public partial class MainPage : ContentPage
     {
         readonly List<Lottery> Lotteries = [
-            new Lottery(limits: new Limits(6, 1, 59)), 
-            new EuroMillionsLottery(limits: new Limits(5, 1, 50), specialLimits: new Limits(2, 1, 12)), 
-            new SetForLifeLottery(limits: new Limits(5, 1, 47), specialLimits: new Limits(1, 1, 10)), 
-            new ThunderballLottery(limits: new Limits(5, 1, 39), specialLimits: new Limits(1, 1, 14))
+            new UKLottoLottery(), 
+            new EuroMillionsLottery(), 
+            new SetForLifeLottery(), 
+            new ThunderballLottery()
         ];
         const KindOfLottery DefaultLottery = KindOfLottery.Uk;
         Lottery Lottery;
